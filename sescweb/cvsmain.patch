@@ -1,0 +1,57 @@
+diff -bBdNrw -U5 --exclude=esesc.xcode --exclude=CVS --exclude=cscope.files --exclude=cscope.out --exclude=ChangeLog cvs-1.11.17-old/src/cvs.h cvs-1.11.17/src/cvs.h
+--- cvs-1.11.18-orig/src/cvs.h	2004-06-09 07:34:54.000000000 -0700
++++ cvs-1.11.18/src/cvs.h	2004-09-13 18:52:36.000000000 -0700
+@@ -138,38 +138,38 @@
+ #define CVSADM_BASE      "CVS/Base"
+ #define CVSADM_BASEREV   "CVS/Baserev."
+ #define CVSADM_BASEREVTMP "CVS/Baserev.tmp"
+ #define CVSADM_TEMPLATE "CVS/Template."
+ #else /* USE_VMS_FILENAMES */
+-#define	CVSADM		"CVS"
+-#define	CVSADM_ENT	"CVS/Entries"
+-#define	CVSADM_ENTBAK	"CVS/Entries.Backup"
+-#define CVSADM_ENTLOG	"CVS/Entries.Log"
+-#define	CVSADM_ENTSTAT	"CVS/Entries.Static"
+-#define	CVSADM_REP	"CVS/Repository"
+-#define	CVSADM_ROOT	"CVS/Root"
+-#define	CVSADM_TAG	"CVS/Tag"
+-#define CVSADM_NOTIFY	"CVS/Notify"
+-#define CVSADM_NOTIFYTMP "CVS/Notify.tmp"
++#define	CVSADM		"CVSmain"
++#define	CVSADM_ENT	"CVSmain/Entries"
++#define	CVSADM_ENTBAK	"CVSmain/Entries.Backup"
++#define CVSADM_ENTLOG	"CVSmain/Entries.Log"
++#define	CVSADM_ENTSTAT	"CVSmain/Entries.Static"
++#define	CVSADM_REP	"CVSmain/Repository"
++#define	CVSADM_ROOT	"CVSmain/Root"
++#define	CVSADM_TAG	"CVSmain/Tag"
++#define CVSADM_NOTIFY	"CVSmain/Notify"
++#define CVSADM_NOTIFYTMP "CVSmain/Notify.tmp"
+ /* A directory in which we store base versions of files we currently are
+    editing with "cvs edit".  */
+-#define CVSADM_BASE     "CVS/Base"
+-#define CVSADM_BASEREV  "CVS/Baserev"
+-#define CVSADM_BASEREVTMP "CVS/Baserev.tmp"
++#define CVSADM_BASE     "CVSmain/Base"
++#define CVSADM_BASEREV  "CVSmain/Baserev"
++#define CVSADM_BASEREVTMP "CVSmain/Baserev.tmp"
+ /* File which contains the template for use in log messages.  */
+-#define CVSADM_TEMPLATE "CVS/Template"
++#define CVSADM_TEMPLATE "CVSmain/Template"
+ #endif /* USE_VMS_FILENAMES */
+ 
+ /* This is the special directory which we use to store various extra
+    per-directory information in the repository.  It must be the same as
+    CVSADM to avoid creating a new reserved directory name which users cannot
+    use, but is a separate #define because if anyone changes it (which I don't
+    recommend), one needs to deal with old, unconverted, repositories.
+    
+    See fileattr.h for details about file attributes, the only thing stored
+    in CVSREP currently.  */
+-#define CVSREP "CVS"
++#define CVSREP "CVSmain"
+ 
+ /*
+  * Definitions for the CVSROOT Administrative directory and the files it
+  * contains.  This directory is created as a sub-directory of the $CVSROOT
+  * environment variable, and holds global administration information for the
