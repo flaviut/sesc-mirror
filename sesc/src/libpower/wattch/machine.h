@@ -52,6 +52,12 @@
  * $Id$
  *
  * $Log$
+ * Revision 1.1.1.1  2004/10/18 17:27:36  renau
+ * Super eScalar Santa Cruz
+ *
+ * Revision 1.1.1.1  2004/09/24 19:40:21  jrenau
+ * Original SESC
+ *
  * Revision 1.1  2003/03/07 21:02:28  sarangi
  * libpower : contains the wattchify script
  *
