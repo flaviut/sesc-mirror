@@ -32,7 +32,7 @@
 	      <table width="100%" border="0" cellspacing="0" cellpadding="8" bgcolor="#FFFFFF">
 		<tr><td align="left" valign="top" class="textall">
 		    
-		    <H4>Available Files</H4>
+		    <H4>Major Releases</H4>
 		    <ul>
 		      <li>Once I have a little bit of time, this would
 		      be ready</li>
@@ -55,14 +55,38 @@
 		      the following instruction set. When prompted for
 		      a password for anonymous, simply press the Enter
 		      key.
-		      <p>
-			cvs -d:pserver:anonymous@cvs.sesc.sourceforge.net:/cvsroot/sesc login
-		      <p>
-			cvs -z3 -d:pserver:anonymous@cvs.sesc.sourceforge.net:/cvsroot/sesc co sesc
+		      <p><tt>
+			  cvs -d:pserver:anonymous@cvs.sesc.sourceforge.net:/cvsroot/sesc login
+			  <br>&nbsp;<br>
+			  cvs -z3 -d:pserver:anonymous@cvs.sesc.sourceforge.net:/cvsroot/sesc co sesc
+			</tt>
 		      <p>
 			Updates from within the module's directory do
 			not need the -d parameter.
-		    
+			
+			
+		      <H5>Developer CVS Access via SSH</H5>
+
+		      Only project developers can access the CVS tree
+		      via this method. SSH1 must be installed on your
+		      client machine. Substitute developername with
+		      your developer account. Enter your site password
+		      when prompted. 
+
+		      <p><tt>
+			  export CVS_RSH=ssh
+			  <br>&nbsp;<br>
+			  cvs -z3 -d:ext:developername@cvs.sesc.sourceforge.net:/cvsroot/sesc co sesc
+			</tt>
+			
+			
+		      <p>
+			Developers spend a serious amount of time with
+			the simulator. To get the source and to submit
+			some patchs, you do not need to be a
+			developer. Currenyly, there are no rules for
+			becoming a developer. If you want to become
+			one, send an email to the talk list.
 		  </td>
 		</tr>
 	      </table>
