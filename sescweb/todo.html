@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2 Level 3.2//EN">
+<HTML>
+  <HEAD>
+    <TITLE> Homepage </TITLE>
+    <META NAME="Author" CONTENT="Joe Renau">
+    <META NAME="Keywords" CONTENT="SESC, Architecture Simulatior, UIUC">
+  </HEAD>
+  
+  <BODY BGCOLOR="#ffffff" TEXT="#000000" LINK="#0000ff" VLINK="#800080" ALINK="#FF0000" LEFTMARGIN=0 TOPMARGIN=0>
+
+    <H4>List of Requests for Contributions</H4>
+
+    If you can contribute in this project, send an email to any of the
+    current <A HREF="people.html">developers</A>.
+
+    <ul>
+      <li>Web Maintainer.
+      </li>
+      <li>Add a McFarling branch predictor. This should be very easy.
+      </li>
+      <li>sesc.pm: configEntry is too simple. If two different types
+      of processors are configured simultaneously it gets
+      confused. Solve it.
+      </li>
+      <li>sync time: Multiprocessor seems to work, but it does not
+	report the sync time.
+      </li>
+      <li>More Verification: Use the uBenchs from alphascalar to
+      verify the behaviour of the simulator.
+      </li>
+      <li>add byDefault to Config: Currently we have isRequired. I
+      recommend to delete it and to add byDefault. This is a much
+      cleaner interface.
+      </li>
+      <li>Missing Instructions: the last instructions although issued,
+      They are not addInst
+      </li>
+      <li> Profiling add the possibility to dump the assembler, with
+      profile information included, for a specified function. This can
+      be done by integrating dismips.c with mint so that it can
+      dissasemble code in all the platforms.
+      </li>
+      <li>Bypass Parameter: A way to cluster functional units, so that
+      bypass between locals is one cycle, but between remote units it
+      takes one extra cycle. This can be done assigning a cluster id
+      to each FU. If it is from another cluster add an extra delay.
+      </li>
+      <li>...</li>
+    </ul>
+    
+  </BODY>
+</HTML>
