@@ -42,6 +42,8 @@
       </li>
       <li>Add a McFarling branch predictor. This should be very easy.
       </li>
+      <li>Model multi cycles branch predictors.
+      </li>
       <li>sesc.pm: configEntry is too simple. If two different types
       of processors are configured simultaneously it gets
       confused. Solve it.
@@ -52,17 +54,11 @@
       <li>More Verification: Use the uBenchs from alphascalar to
       verify the behaviour of the simulator.
       </li>
-      <li>add byDefault to Config: Currently we have isRequired. I
-      recommend to delete it and to add byDefault. This is a much
-      cleaner interface.
+      <li>LDSTQueue has a bug that may hangs the simulation. This is
+      my top priority bug.
       </li>
       <li>Missing Instructions: the last instructions although issued,
       They are not addInst
-      </li>
-      <li> Profiling add the possibility to dump the assembler, with
-      profile information included, for a specified function. This can
-      be done by integrating dismips.c with mint so that it can
-      dissasemble code in all the platforms.
       </li>
       <li>Bypass Parameter: A way to cluster functional units, so that
       bypass between locals is one cycle, but between remote units it
