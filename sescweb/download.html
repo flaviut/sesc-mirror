@@ -17,9 +17,9 @@
 	    </tr>
 	  </table>
 	  <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FF9900">
-	    <tr> <td class="elm">&nbsp;<a href="todo.html">Todo</a>&nbsp;|&nbsp<a href="documentation.html">Documentation</a>&nbsp;|&nbsp;<a href="links.html">Related&nbsp;Links</a>&nbsp;|&nbsp;<a href="download.html">Download</a>&nbsp;|&nbsp;<a href="http://sourceforge.net/projects/sesc">Sourceforge</a>&nbsp;</td>
+	    <tr> <td class="elm">&nbsp;<a href="index.html">Home</a>&nbsp;|&nbsp<a href="documentation.html">Documentation</a>&nbsp;|&nbsp;<a href="people.html">Contacts</a></td>
 	      <td width="100%">&nbsp;</td>
-	      <td class="elm"><a href="index.html">Home</a>&nbsp;|&nbsp;<a href="people.html">Contacts</a>&nbsp;</td>
+	      <td class="elm"><a href="download.html">Download</a>&nbsp;|&nbsp;<a href="http://sourceforge.net/projects/sesc">Sourceforge</a>&nbsp;</td>
 	    </tr>
 	  </table>
 	</td>
@@ -32,40 +32,49 @@
 	      <table width="100%" border="0" cellspacing="0" cellpadding="8" bgcolor="#FFFFFF">
 		<tr><td align="left" valign="top" class="textall">
 		    
-		      <H4>Major Releases</H4>
+		      <H4>Download tools</H4>
 		      <ul>
-			<li>sescutils contains all the required tools to create a binary for sesc:
-			bintuils-2.13, gcc-3.2.1, and glibc-2.3.
+			<li><a
+			href="https://sourceforge.net/project/showfiles.php?group_id=49065">sescutils</a>
+			contains all the required tools to create a
+			binary for sesc: bintuils, gcc,and glibc.
 			</li>
-			<li>Once I have a little bit of time, this would be ready</li>
 		      </ul>
 
-		    <H4>Compiling Applications</H4>
-		    
-		      In order to generate binaries for SESC you have two options:
-		      <ul>
-			<li>Use the SGI MIPSPro compiler with static libraries to generate O32 ABI
-			</li>
-			<li>Use the gcc cross-compiler with a mipseb-linux target that generates O32
-			ABI
-			</li>
-		      </ul>
-		      
-		      We can make available the gcc-3.2.1 cross-compiler in the <a
-		      href="https://sourceforge.net/project/showfiles.php?group_id=49065">sescutils
-		      section</a>. It must be expanded in the /usr/local of your local Linux
-		      machine. If your work environment is not Linux, you should build the gcc and
-		      the glibc from scratch. Check /usr/local/mipseb-linux/README for compilation
-		      options.
-		      
+
 		    <H4>CVS Server from sourceforge</H4>
-
-		      In the CVS server there are two main packages the web server itself (sescweb),
-		      and the simulator (sesc).
 
 		      It is possible to <a
 		      href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/sesc/">browse
 		      the source code</a>
+
+		      <H5>Create a Local CVS Server</H5>
+
+		      We understand that you do not want to commit
+		      while your research is still not published. You
+		      may have a local cvs server.
+		      <br>
+		      For such a scenario, I recommend to create a new
+		      cvs binary (cvsmain) using this <a
+		      href="cvsmain.patch">patch</a>. Do a checkout
+		      using cvsmain instead of cvs. You will see that
+		      it uses CVSmain instead of CVS as directory to
+		      hold the cvs information.
+		      <br>
+		      Now, you can commit the recently checkout code
+		      to your local cvs. From time to time, do a
+		      "cvsmain update" to synchronize with the main
+		      cvs server. Synchronization steps:
+
+		      <p><tt>
+			  cvs update
+			  <br>
+			  cvsmain update
+			  <br>
+			  # solve possible conflicts
+			  <br>
+			  cvs commit
+			</tt>
 
 		      <H5>Anonymous CVS Access</H5>
 
@@ -73,8 +82,10 @@
 		      (pserver) CVS with the following instruction set. When prompted for a password
 		      for anonymous, simply press the Enter key.  
 
-		      <p><tt> cvs -d:pserver:anonymous@cvs.sesc.sourceforge.net:/cvsroot/sesc login
-		      <br>&nbsp;<br> cvs -z3 -d:pserver:anonymous@cvs.sesc.sourceforge.net:/cvsroot/sesc co sesc
+		      <p><tt> 
+			  cvs -d:pserver:anonymous@cvs.sesc.sourceforge.net:/cvsroot/sesc login
+			  <br>
+			  cvs -z3 -d:pserver:anonymous@cvs.sesc.sourceforge.net:/cvsroot/sesc co sesc
 			</tt>
 		      <p>
 			Updates from within the module's directory do not need the -d parameter.
@@ -88,8 +99,8 @@
 
 		      <p><tt>
 			  export CVS_RSH=ssh
-			  <br>&nbsp;<br>
-			  cvs -z3 -d:ext:developername@cvs.sesc.sourceforge.net:/cvsroot/sesc co sesc
+			  <br>
+			  cvs -z3 -d:ext:DEVELOPER@cvs.sourceforge.net:/cvsroot/sesc co sesc
 			</tt>
 			
 			
