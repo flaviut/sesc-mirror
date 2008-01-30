@@ -1,9 +1,4 @@
 //===========================================================================
-//  CVS Information:
-//
-//     $RCSfile$  $Revision$  $State$
-//     $Author$  $Date$
-//     $Locker$
 //---------------------------------------------------------------------------
 //
 // DESCRIPTION
@@ -24,6 +19,9 @@
 // REVISION HISTORY:
 //
 // $Log$
+// Revision 1.1  2008/01/30 05:33:21  jrenau
+// Sync for OS X and sesctherm
+//
 // Revision 1.1  2000/07/12 21:51:46  jsiek
 // Initial revision
 //

@@ -1,6 +1,4 @@
 //
-// "$Id$"
-//
 // CubeView class definitions for the Fast Light Tool Kit (FLTK).
 //
 // Copyright 1998-2003 by Bill Spitzak and others.
@@ -43,6 +41,3 @@ cout << "I'm all done!" << endl;
 }
 
 
-//
-// End of "$Id$".
-//

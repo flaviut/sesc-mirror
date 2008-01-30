@@ -1,7 +1,5 @@
 // -*- c++ -*-
 //
-// $Id$
-//
 // Software License for MTL
 //
 // Copyright (c) 2001-2005 The Trustees of Indiana University. All rights reserved.
