@@ -42,75 +42,17 @@
 		      </ul>
 
 
-		    <H4>CVS Server from sourceforge</H4>
+		    <H4>Github mirror</H4>
 
 		      It is possible to <a
-		      href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/sesc/">browse
+		      href="https://github.com/flaviut/sesc-mirror">browse
 		      the source code</a>
 
-		      <H5>Create a Local CVS Server</H5>
+		    <H4>Contributing</H4>
 
-		      We understand that you do not want to commit
-		      while your research is still not published. You
-		      may have a local cvs server.
-		      <br>
-		      For such a scenario, I recommend to create a new
-		      cvs binary (cvsmain) using this <a
-		      href="cvsmain.patch">patch</a>. Do a checkout
-		      using cvsmain instead of cvs. You will see that
-		      it uses CVSmain instead of CVS as directory to
-		      hold the cvs information.
-		      <br>
-		      Now, you can commit the recently checkout code
-		      to your local cvs. From time to time, do a
-		      "cvsmain update" to synchronize with the main
-		      cvs server. Synchronization steps:
-
-		      <p><tt>
-			  cvs update
-			  <br>
-			  cvsmain update
-			  <br>
-			  # solve possible conflicts
-			  <br>
-			  cvs commit
-			</tt>
-
-		      <H5>Anonymous CVS Access</H5>
-
-		      This project's SourceForge CVS repository can be checked out through anonymous
-		      (pserver) CVS with the following instruction set. When prompted for a password
-		      for anonymous, simply press the Enter key.  
-
-		      <p><tt> 
-			  cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/sesc login
-			  <br>
-			  cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/sesc co sesc
-			</tt>
-		      <p>
-			Updates from within the module's directory do not need the -d parameter.
-			
-			
-		      <H5>Developer CVS Access via SSH</H5>
-
-		      Only project developers can access the CVS tree via this method. SSH1 must be
-		      installed on your client machine. Substitute developername with your developer
-		      account. Enter your site password when prompted.
-
-		      <p><tt>
-			  export CVS_RSH=ssh
-			  <br>
-			  cvs -z3 -d:ext:DEVELOPER@cvs.sourceforge.net:/cvsroot/sesc co sesc
-			</tt>
-			
-			
-		      <p>
-			Developers spend a serious amount of time with
-			the simulator. To get the source and to submit
-			some patchs, you do not need to be a
-			developer. Currenyly, there are no rules for
-			becoming a developer. If you want to become
-			one, send an email to the talk list.
+          Please reach out to <a href="people.html">the maintainers</a>. This
+          mirror does not accept new contributions, and there have been no
+          changes to the code since 2009.
 		  </td>
 		</tr>
 	      </table>
